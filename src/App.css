@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100%;
+  padding: 20px;
+}
+.toggle-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-btn:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-icon {
+  margin-right: 10px;
+  /* Space between icon and text */
+}
+
+.selectors {
+  display: flex;
+  flex-direction: column;
+  /* Stack the filters vertically */
+  gap: 10px;
+  /* Space between filters */
+  margin-bottom: 20px;
+}
+
+.selectors label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.selectors select {
+  padding: 5px;
+  font-size: 12px;
+  width: 15%;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.kanban-column {
+  /* background-color: #ffffff; */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  min-height: 400px;
+}
+
+.kanban-column h3 {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.ticket:hover {
+  background-color: #f1f1f1;
+}
+
+.ticket h4 {
+  font-size: 16px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.ticket p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.user-name {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+}
+
+.priority {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.priority.no-priority {
+  color: #6c757d;
+  /* Grey */
+}
+
+.priority.low {
+  color: #f0ad4e;
+  /* Orange */
+}
+
+.priority.medium {
+  color: #5bc0de;
+  /* Blue */
+}
+
+.priority.high {
+  color: #5cb85c;
+  /* Green */
+}
+
+.priority.urgent {
+  color: #d9534f;
+  /* Red */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .selectors select {
+    padding: 3px;
+    font-size: 10px;
+    width: 20%;
+  }
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kanban-column {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
